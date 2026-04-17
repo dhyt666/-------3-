@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demosponge 系统发育基因组学</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background-color: #fff;
+        }
+
+        /* 布局容器 */
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* 侧边栏导航 */
+        .sidebar {
+            width: 280px;
+            background-color: #f6f8fa;
+            border-right: 1px solid #e1e4e8;
+            padding: 30px 20px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #0366d6;
+        }
+
+        .sidebar .version {
+            font-size: 0.85rem;
+            color: #586069;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar nav a {
+            text-decoration: none;
+            color: #0366d6;
+            font-size: 0.95rem;
+            display: block;
+            padding: 6px 0;
+        }
+
+        .sidebar nav a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar .sub-menu {
+            margin-left: 20px;
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar .sub-menu li {
+            margin-bottom: 0.25rem;
+        }
+
+        .sidebar .sub-menu a {
+            font-size: 0.85rem;
+            color: #586069;
+        }
+
+        /* 主内容区 */
+        .main-content {
+            flex: 1;
+            padding: 40px 50px;
+            max-width: calc(100% - 280px);
+        }
+
+        /* 欢迎区域 */
+        .hero {
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #24292e;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #586069;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        /* 数据集区域 */
+        .dataset-section {
+            border-top: 1px solid #e1e4e8;
+            padding-top: 30px;
+            margin-top: 20px;
+        }
+
+        .dataset-section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #24292e;
+        }
+
+        .dataset-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+            color: #24292e;
+        }
+
+        .dataset-section p {
+            color: #586069;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .dataset-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dataset-section li {
+            color: #586069;
+            margin-bottom: 0.25rem;
+        }
+
+        /* 页脚 */
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e4e8;
+            font-size: 0.8rem;
+            color: #6a737d;
+        }
+
+        .footer p {
+            margin-bottom: 0.25rem;
+        }
+
+        .footer a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid #e1e4e8;
+            }
+            .main-content {
+                max-width: 100%;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 侧边栏导航 -->
+        <aside class="sidebar">
+            <h1>Demosponge<br>系统发育基因组学</h1>
+            <div class="version">2.0 版本</div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li>
+                        <a href="#">数据集</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">基因顺序</a></li>
+                            <li><a href="#">系统发育</a></li>
+                            <li><a href="#">线粒体基因组</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">时间树</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">GenBank</a></li>
+                    <li><a href="#">WPD</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 欢迎语 -->
+            <div class="hero">
+                <h2>欢迎访问 Demosponge 系统发育基因组学网站！</h2>
+                <p>本网站包含基于线粒体基因组数据的 demosponge 关系系统发育分析数据及结果。该网站由 Dennis Lavrov 创建，由爱荷华州立大学的 Lavrov 实验室维护。</p>
+                <p>网站版本 1 包含了来自我们 bioRxiv 文章的数据和图表。网站第二版包含更新稿件的数据和图表。随着更多线粒体基因组的出现，我们计划更新数据文件和系统发育重建。</p>
+                <p>请使用左侧菜单查看数据和结果，如有任何错误或新增内容，请告知我们。</p>
+            </div>
+
+            <!-- 数据集区域 -->
+            <div class="dataset-section">
+                <h2>数据集</h2>
+                
+                <h3>线粒体基因组</h3>
+                <p>公开可用的 demosponge 线粒体基因组综合列表，并附有 GenBank 文件和出版物链接（如发现）。</p>
+                
+                <h3>系统发育分析</h3>
+                <ul>
+                    <li>用于基于序列的系统发育分析的氨基酸序列比对（136个分类单元）。</li>
+                    <li>简化的氨基酸序列比对（83个分类单元）。</li>
+                    <li>用于基于基因顺序的系统发育分析的基因顺序比对。</li>
+                </ul>
+                
+                <h3>分子时钟分析</h3>
+                <p>用于分子时钟分析的化石校准。</p>
+            </div>
+
+            <!-- 页脚 -->
+            <div class="footer">
+                <p>内容由爱荷华州立大学 Lavrov 实验室创建。</p>
+                <p>由 <a href="#">GitHub Pages</a> 托管。基于 Millidocs 的 Jekyll 主题。</p>
+                <p>除非另有说明，本网站内容均采用 <a href="#">知识共享署名 4.0 国际许可协议</a> 授权。</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
